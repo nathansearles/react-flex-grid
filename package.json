@@ -1,0 +1,54 @@
+{
+  "name": "@nathansearles/react-grid",
+  "version": "1.0.0",
+  "description": "A simple React based grid system",
+  "author": "Nathan Searles",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "component",
+    "grid",
+    "grid system"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "proseWrap": "always"
+  },
+  "eslintIgnore": [
+    "dist/**"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --name ReactGrid --format cjs,esm,umd"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-scss": "^2.6.1",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

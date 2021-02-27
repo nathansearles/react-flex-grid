@@ -1,0 +1,162 @@
+// Variables
+$xs: 32rem; // ~512px
+$sm: 45rem; // ~720px
+$md: 64rem; // ~1024px
+$lg: 80rem; // ~1280px
+$xl: 90rem; // ~1440px
+$xxl: 105rem; // ~1680px
+
+$breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+);
+
+$grid-columns: 12;
+$grid-column-width: 100 / $grid-columns;
+
+// Mixins
+
+// Row props
+@mixin row-props() {
+  @each $breakpoint, $sizes in $breakpoints {
+    @media (min-width: $sizes) {
+      &.justify-start\@#{$breakpoint} {
+        justify-content: flex-start;
+      }
+      &.justify-center\@#{$breakpoint} {
+        justify-content: center;
+      }
+      &.justify-end\@#{$breakpoint} {
+        justify-content: flex-end;
+      }
+      &.align-start\@#{$breakpoint} {
+        align-items: flex-start;
+      }
+      &.align-center\@#{$breakpoint} {
+        align-items: center;
+      }
+      &.align-end\@#{$breakpoint} {
+        align-items: flex-end;
+      }
+      &.spacing-0\@#{$breakpoint} {
+        margin-right: 0;
+        margin-left: 0;
+        .column {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+      &.spacing-1\@#{$breakpoint} {
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+        .column {
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+        }
+      }
+      &.spacing-2\@#{$breakpoint} {
+        margin-right: -1rem;
+        margin-left: -1rem;
+        .column {
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+      &.spacing-3\@#{$breakpoint} {
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+        .column {
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+      }
+      &.spacing-4\@#{$breakpoint} {
+        margin-right: -2rem;
+        margin-left: -2rem;
+        .column {
+          padding-right: 2rem;
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// Column props
+@mixin col-props() {
+  @each $breakpoint, $sizes in $breakpoints {
+    @media (min-width: $sizes) {
+      @for $i from 1 through $grid-columns {
+        $width: unquote($grid-column-width * $i + '%');
+        &.column-#{$i}\@#{$breakpoint} {
+          flex-basis: $width;
+          max-width: $width;
+        }
+        &.column-auto\@#{$breakpoint} {
+          flex-grow: 1;
+          max-width: 100%;
+          flex-basis: 0;
+        }
+        &.column-offset-#{$i}\@#{$breakpoint} {
+          margin-left: $width;
+        }
+        &.column-order-#{$i}\@#{$breakpoint} {
+          order: $i;
+        }
+      }
+    }
+  }
+}
+
+// Container
+.container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: $xxl;
+
+  // Handle iPhone notch
+  --safe-area-inset-left: env(safe-area-inset-left);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  padding-left: calc(1rem + var(--safe-area-inset-left));
+  padding-right: calc(1rem + var(--safe-area-inset-right));
+
+  @media (min-width: $md) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+// Row
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  // Gutter offset
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+
+  // Props mixin
+  @include row-props();
+}
+
+// Columns
+.column {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+
+  // Gutter
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  // Props mixin
+  @include col-props();
+}
