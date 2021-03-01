@@ -128,8 +128,8 @@ $grid-column-width: 100 / $grid-columns;
   flex-wrap: wrap;
 
   // Gutter offset
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 
   // Props mixin
   @include row-props();
