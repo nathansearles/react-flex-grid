@@ -7,8 +7,8 @@ grid system.
 
 ## To do
 
+- [ ] Examples website
 - [ ] Project level config
-- [ ] Additional usage examples
 - [ ] Testing
 - [ ] Refine docs
 
