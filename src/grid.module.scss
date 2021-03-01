@@ -51,32 +51,24 @@ $grid-column-width: 100 / $grid-columns;
         }
       }
       &.spacing-1\@#{$breakpoint} {
-        margin-right: -0.5rem;
-        margin-left: -0.5rem;
         .column {
           padding-right: 0.5rem;
           padding-left: 0.5rem;
         }
       }
       &.spacing-2\@#{$breakpoint} {
-        margin-right: -1rem;
-        margin-left: -1rem;
         .column {
           padding-right: 1rem;
           padding-left: 1rem;
         }
       }
       &.spacing-3\@#{$breakpoint} {
-        margin-right: -1.5rem;
-        margin-left: -1.5rem;
         .column {
           padding-right: 1.5rem;
           padding-left: 1.5rem;
         }
       }
       &.spacing-4\@#{$breakpoint} {
-        margin-right: -2rem;
-        margin-left: -2rem;
         .column {
           padding-right: 2rem;
           padding-left: 2rem;
@@ -139,10 +131,6 @@ $grid-column-width: 100 / $grid-columns;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-
-  // Gutter offset
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
 
   // Props mixin
   @include row-props();
