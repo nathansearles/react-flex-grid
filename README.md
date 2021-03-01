@@ -1,18 +1,28 @@
-# React Grid
+# React Flex Grid
+
+:fire: **In active development** :fire:
+
+A simple React based grid system using flex. Uses 12 columns based on the 8px
+grid system.
+
+## To do
+
+- [ ] Project level config
+- [ ] Additional usage examples
+- [ ] Testing
+- [ ] Refine docs
 
 ## Installation
 
 ```bash
 #Yarn
-yarn add @nathansearles/react-grid
+yarn add @nathansearles/react-flex-grid
 
 #NPM
-npm install @nathansearles/react-grid
+npm install @nathansearles/react-flex-grid
 ```
 
 ## Column
-
----
 
 | Prop       | Description                   | Keys                    | Values                                                                | Types                   |
 | ---------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- | ----------------------- |
@@ -42,8 +52,6 @@ npm install @nathansearles/react-grid
 
 ## Row
 
----
-
 | Prop      | Description                                | Keys                    | Values                             | Types           |
 | --------- | ------------------------------------------ | ----------------------- | ---------------------------------- | --------------- |
 | `justify` | Define justification by breakpoint         | xs, sm, md, lg, xl, xxl | "normal", "start", "center", "end" | `string:string` |
@@ -72,10 +80,8 @@ npm install @nathansearles/react-grid
 
 ## Simple example
 
----
-
 ```jsx
-import { Container, Row, Column } from '@nathansearles/react-grid';
+import { Container, Row, Column } from '@nathansearles/react-flex-grid';
 
 function App() {
   return (

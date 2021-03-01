@@ -1,7 +1,7 @@
 {
-  "name": "@nathansearles/react-grid",
+  "name": "@nathansearles/react-flex-grid",
   "version": "1.0.0",
-  "description": "A simple React based grid system",
+  "description": "A simple React based grid system using flex",
   "author": "Nathan Searles",
   "main": "dist/index.js",
   "license": "MIT",
@@ -9,7 +9,8 @@
     "react",
     "component",
     "grid",
-    "grid system"
+    "grid system",
+    "flex grid"
   ],
   "prettier": {
     "singleQuote": true,
