@@ -10,21 +10,19 @@ yarn add @nathansearles/react-grid
 npm install @nathansearles/react-grid
 ```
 
-## Column props
+## Column
 
-| Prop       | Description                   | Value                   |
-| ---------- | ----------------------------- | ----------------------- |
-| `columns`  | Define columns by breakpoint  | `string:string\|number` |
-| `offsets`  | Define offsets by breakpoint  | `string:number`         |
-| `ordering` | Define ordering by breakpoint | `string:number`         |
+---
 
-<details>
+| Prop       | Description                   | Keys                    | Values                                                                | Types                   |
+| ---------- | ----------------------------- | ----------------------- | --------------------------------------------------------------------- | ----------------------- |
+| `columns`  | Define columns by breakpoint  | xs, sm, md, lg, xl, xxl | 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 'auto' | `string:string\|number` |
+| `offsets`  | Define offsets by breakpoint  | xs, sm, md, lg, xl, xxl | 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12           | `string:number`         |
+| `ordering` | Define ordering by breakpoint | xs, sm, md, lg, xl, xxl | any number                                                            | `string:number`         |
 
-<summary><b>Column usage</b></summary>
+### Examples
 
 **Columns**
-
-Values: `1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 'auto'`
 
 ```jsx
 <Column columns={{ xs: 12, md: 10, xl: 8 }}>Lorem ipsum...</Column>
@@ -32,37 +30,29 @@ Values: `1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 'auto'`
 
 **Offsets**
 
-Values: `1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12`
-
 ```jsx
 <Column offsets={{ xs: 1, md: 2, xl: 4 }}>Lorem ipsum...</Column>
 ```
 
 **Ordering**
 
-Values: any number
-
 ```jsx
 <Column ordering={{ xs: 1, md: 2, xl: 1 }}>Lorem ipsum...</Column>
 ```
 
-</details>
+## Row
 
-## Row props
+---
 
-| Prop      | Description                                | Value           |
-| --------- | ------------------------------------------ | --------------- |
-| `justify` | Define justification by breakpoint         | `string:string` |
-| `align`   | Define alignment by breakpoint             | `string:string` |
-| `spacing` | Define gutter spacing \* 8px by breakpoint | `string:number` |
+| Prop      | Description                                | Keys                    | Values                             | Types           |
+| --------- | ------------------------------------------ | ----------------------- | ---------------------------------- | --------------- |
+| `justify` | Define justification by breakpoint         | xs, sm, md, lg, xl, xxl | "normal", "start", "center", "end" | `string:string` |
+| `align`   | Define alignment by breakpoint             | xs, sm, md, lg, xl, xxl | "normal", "start", "center", "end" | `string:string` |
+| `spacing` | Define gutter spacing \* 8px by breakpoint | xs, sm, md, lg, xl, xxl | 0 , 1 , 2 , 3 , 4                  | `string:number` |
 
-<details>
-
-<summary><b>Column usage</b></summary>
+### Examples
 
 **Justify**
-
-Values: `'normal' | 'start' | 'center' | 'end'`
 
 ```jsx
 <Row justify={{ xs: 'center', md: 'start', xl: 'end' }}>Lorem ipsum...</Row>
@@ -70,23 +60,19 @@ Values: `'normal' | 'start' | 'center' | 'end'`
 
 **Align**
 
-Values: `'normal' | 'start' | 'center' | 'end'`
-
 ```jsx
 <Row align={{ xs: 'center', md: 'start', xl: 'end' }}>Lorem ipsum...</Row>
 ```
 
 **Spacing**
 
-Values: `0 | 1 | 2 | 3 | 4`
-
 ```jsx
 <Row align={{ xs: 'center', md: 'start', xl: 'end' }}>Lorem ipsum...</Row>
 ```
 
-</details>
-
 ## Simple example
+
+---
 
 ```jsx
 import { Container, Row, Column } from '@nathansearles/react-grid';
@@ -95,7 +81,10 @@ function App() {
   return (
     <Container>
       <Row>
-        <Column columns={{ xs: 12, md: 10, lg: 8 }}>
+        <Column columns={{ xs: 12, md: 6, lg: 4 }}>
+          <h2>Lorem ipsum dolor sit amet...</h2>
+        </Column>
+        <Column columns={{ xs: 12, md: 6, lg: 4 }}>
           <h2>Lorem ipsum dolor sit amet...</h2>
         </Column>
       </Row>

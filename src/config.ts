@@ -1,14 +1,8 @@
-// $xs: 32rem; // ~512px
-// $sm: 45rem; // ~720px
-// $md: 64rem; // ~1024px
-// $lg: 80rem; // ~1280px
-// $xl: 90rem; // ~1440px
-// $xxl: 105rem; // ~1680px
-
 type configOptions = {
   breakpoints: object;
 };
 
+// REM to PX conversion: REM * 16 or 105 * 16 = 1680px
 const getConfig: configOptions = {
   breakpoints: {
     xs: '32rem',
