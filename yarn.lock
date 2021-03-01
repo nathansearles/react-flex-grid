@@ -1100,10 +1100,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@nathansearles/react-flex-grid@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@nathansearles/react-flex-grid/-/react-flex-grid-1.0.4.tgz#e5576822bcba99aaf8e1d381477bb4fdebe498fa"
-  integrity sha512-s9tccn6A//hfr1RaMwbkAk+cfFboCufisd5XUuqiE2q12xD8LlFKxrQ7xQNMgL71PH8FU2/Y7mhDLKGnoYSwhA==
+"@nathansearles/react-flex-grid@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@nathansearles/react-flex-grid/-/react-flex-grid-1.0.5.tgz#64b59bcf57a3d9634e6455ed4cafde840f74325c"
+  integrity sha512-Ec4FPhOO5kYj6DGD++rNQN9sQnPaZDVLPDpXy+cluIbBUepanW139thSkLuve3d2A2rtDdn6XDJOEyOzex12Ow==
   dependencies:
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"

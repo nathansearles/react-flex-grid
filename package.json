@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@nathansearles/react-flex-grid": "^1.0.4",
+    "@nathansearles/react-flex-grid": "^1.0.5",
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1"
