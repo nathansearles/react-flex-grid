@@ -127,12 +127,14 @@ $grid-column-width: 100 / $grid-columns;
   flex-direction: row;
   flex-wrap: wrap;
 
+  // Props mixin
+  @include row-props();
+}
+
+.container + .row {
   // Gutter offset
   margin-right: -0.5rem;
   margin-left: -0.5rem;
-
-  // Props mixin
-  @include row-props();
 }
 
 // Columns
