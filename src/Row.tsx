@@ -28,7 +28,7 @@ export default function Row({
   const breakpointLabels = Object.keys(getConfig.breakpoints);
 
   // Setup our class array
-  const classNames: string[] = [styles.column];
+  const classNames: string[] = [styles.row];
 
   // The justification within breakpoint
   // @param {Object} justify prop
@@ -68,7 +68,7 @@ export default function Row({
   spacing && handleSpacing(spacing);
 
   return (
-    <div className={[styles.row, classNames.join(' '), className].join(' ')}>
+    <div className={[classNames.join(' '), className].join(' ')}>
       {children}
     </div>
   );
