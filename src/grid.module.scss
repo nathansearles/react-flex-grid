@@ -117,11 +117,6 @@ $grid-column-width: 100 / $grid-columns;
   --safe-area-inset-right: env(safe-area-inset-right);
   padding-left: calc(1rem + var(--safe-area-inset-left));
   padding-right: calc(1rem + var(--safe-area-inset-right));
-
-  @media (min-width: $md) {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
 }
 
 // Row
@@ -131,6 +126,10 @@ $grid-column-width: 100 / $grid-columns;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
+
+  // Gutter offset
+  margin-right: -1rem;
+  margin-left: -1rem;
 
   // Props mixin
   @include row-props();
