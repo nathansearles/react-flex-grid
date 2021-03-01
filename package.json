@@ -1,6 +1,6 @@
 {
   "name": "@nathansearles/react-flex-grid",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple React based grid system using flex",
   "author": "Nathan Searles",
   "main": "dist/index.js",
