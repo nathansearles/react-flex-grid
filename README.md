@@ -14,6 +14,8 @@ grid system.
 
 ## Installation
 
+[@nathansearles/react-flex-grid](https://www.npmjs.com/package/@nathansearles/react-flex-grid)
+
 ```bash
 #Yarn
 yarn add @nathansearles/react-flex-grid
