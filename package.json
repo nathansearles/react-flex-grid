@@ -25,17 +25,18 @@
     "build": "tsdx build --name ReactGrid --format cjs,esm,umd"
   },
   "dependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "autoprefixer": "^10.2.4",
-    "cssnano": "^4.1.10",
-    "postcss": "^8.2.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.5",
+    "postcss": "^8.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-scss": "^2.6.1",
+    "sass": "^1.34.1",
     "tsdx": "^0.14.1",
-    "typescript": "^4.1.2"
+    "typescript": "^4.3.2"
   },
   "eslintConfig": {
     "extends": [

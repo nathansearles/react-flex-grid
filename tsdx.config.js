@@ -14,6 +14,7 @@ module.exports = {
         ],
         modules: true,
         inject: true,
+        preventAssignment: true,
       }),
     );
     return config;
