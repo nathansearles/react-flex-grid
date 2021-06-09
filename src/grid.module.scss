@@ -1,4 +1,6 @@
-// Variables
+@use "sass:math";
+
+// Breakpoints values
 $xs: 32rem; // ~512px
 $sm: 45rem; // ~720px
 $md: 64rem; // ~1024px
@@ -6,6 +8,7 @@ $lg: 80rem; // ~1280px
 $xl: 90rem; // ~1440px
 $xxl: 105rem; // ~1680px
 
+// Breakpoints map
 $breakpoints: (
   xs: 0,
   sm: $sm,
@@ -15,10 +18,10 @@ $breakpoints: (
   xxl: $xxl,
 );
 
+// Grid variables
 $grid-columns: 12;
-$grid-column-width: 100 / $grid-columns;
-
-// Mixins
+$grid-column-width: math.div(100, $grid-columns);
+$gutter-width: 0.5rem;
 
 // Row props
 @mixin row-props() {
@@ -52,26 +55,26 @@ $grid-column-width: 100 / $grid-columns;
       }
       &.spacing-1\@#{$breakpoint} {
         .column {
-          padding-right: 0.5rem;
-          padding-left: 0.5rem;
+          padding-right: $gutter-width;
+          padding-left: $gutter-width;
         }
       }
       &.spacing-2\@#{$breakpoint} {
         .column {
-          padding-right: 1rem;
-          padding-left: 1rem;
+          padding-right: $gutter-width * 2;
+          padding-left: $gutter-width * 2;
         }
       }
       &.spacing-3\@#{$breakpoint} {
         .column {
-          padding-right: 1.5rem;
-          padding-left: 1.5rem;
+          padding-right: $gutter-width * 3;
+          padding-left: $gutter-width * 3;
         }
       }
       &.spacing-4\@#{$breakpoint} {
         .column {
-          padding-right: 2rem;
-          padding-left: 2rem;
+          padding-right: $gutter-width * 4;
+          padding-left: $gutter-width * 4;
         }
       }
     }
@@ -111,12 +114,27 @@ $grid-column-width: 100 / $grid-columns;
   margin-left: auto;
   width: 100%;
   max-width: $xxl;
-
+  --container-padding-left: 1rem;
+  --container-padding-right: 1rem;
+  @media (min-width: $md) {
+    --container-padding-left: 2rem;
+    --container-padding-right: 2rem;
+  }
   // Handle iPhone notch
   --safe-area-inset-left: env(safe-area-inset-left);
   --safe-area-inset-right: env(safe-area-inset-right);
-  padding-left: calc(1rem + var(--safe-area-inset-left));
-  padding-right: calc(1rem + var(--safe-area-inset-right));
+  padding-left: calc(
+    var(--container-padding-left) + var(--safe-area-inset-left)
+  );
+  padding-right: calc(
+    var(--container-padding-right) + var(--safe-area-inset-right)
+  );
+
+  .row {
+    // Gutter offset
+    margin-right: -$gutter-width;
+    margin-left: -$gutter-width;
+  }
 }
 
 // Row
@@ -131,20 +149,14 @@ $grid-column-width: 100 / $grid-columns;
   @include row-props();
 }
 
-.container + .row {
-  // Gutter offset
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
 // Columns
 .column {
   box-sizing: border-box;
   flex: 0 0 auto;
 
   // Gutter
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
 
   // Props mixin
   @include col-props();
