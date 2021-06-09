@@ -24,7 +24,7 @@
     "start": "tsdx watch",
     "build": "tsdx build --name ReactGrid --format cjs,esm,umd"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "autoprefixer": "^10.2.6",
