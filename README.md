@@ -9,8 +9,8 @@ grid system.
 
 - [x] Examples website
 - [ ] Project level config
-- [ ] Testing
-- [ ] Refine docs
+- [x] Testing
+- [x] Refine docs
 
 ## Examples
 
