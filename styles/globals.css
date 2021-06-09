@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: #fff;
-  background-color: #001021;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fefefe;
+  color: #181818;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 a {
@@ -17,20 +21,131 @@ a {
   box-sizing: border-box;
 }
 
+h1,
+.h1 {
+  font-size: 5.5rem;
+  line-height: 0.9;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 720px) {
+  h1,
+  .h1 {
+    font-size: 11rem;
+    line-height: 0.9;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 720px) {
+  h2,
+  .h2 {
+    font-size: 4.9375rem;
+    line-height: 1.1;
+  }
+}
+h3,
+.h3 {
+  font-size: 2.25rem;
+  line-height: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+h4,
+.h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+h5,
+.h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
 }
+
 .github-corner svg {
-  fill: #fff;
-  color: #151513;
+  fill: #151513;
+  color: #fff;
   position: absolute;
   top: 0;
   border: 0;
   right: 0;
 }
+
 .github-corner .octo-arm {
   transform-origin: 130px 106px;
 }
+
 @keyframes octocat-wave {
   0%,
   100% {
